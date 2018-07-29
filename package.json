@@ -1,0 +1,31 @@
+{
+  "name": "ganttviz2018",
+  "version": "1.0.0",
+  "description": "Playing with Gantt charts",
+  "main": "index.js",
+  "scripts": {
+    "copy-html": "cp src/index.html build/index.html",
+    "bundle-js": "browserify src/js/index.js --outfile build/build.js -t [ babelify --presets [ '@babel/preset-env' ] ]",
+    "build": "npm run copy-html && npm run bundle-js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boothsl/GanttViz2018.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/boothsl/GanttViz2018/issues"
+  },
+  "homepage": "https://github.com/boothsl/GanttViz2018#readme",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.55",
+    "@babel/preset-env": "^7.0.0-beta.55",
+    "babelify": "^9.0.0",
+    "browserify": "^16.2.2"
+  },
+  "dependencies": {
+    "d3": "^5.5.0"
+  }
+}
